@@ -8,15 +8,25 @@
     <link rel="icon" href="image/logo_ssh.png">
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/bootstrap.min.css'>
+
     <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" href="css/hamburgers.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
 </head>
 
 <body>
-    <nav>
+    <nav class="">
         <input type="checkbox" id="check">
         <label for="check" class="checkbtn">
-          <i class="fas fa-bars"></i>
+            <div class="hamburger hamburger--3dx-r ">
+                <div class="hamburger-box">
+                    <div class="hamburger-inner">
+    
+                    </div>
+                </div>
+                </div>
+          
         </label>
         <label class="logo">DesignX</label>
         <ul class=" ">
@@ -26,7 +36,15 @@
             <li><a href="#">Contact</a></li>
             <li><a href="#">Feedback</a></li>
         </ul>
-        <div></div>
+        <!-- 
+        <div class="hamburger hamburger--3dx-r d-md-none ">
+            <div class="hamburger-box">
+                <div class="hamburger-inner">
+
+                </div>
+            </div>
+        </div> -->
+
     </nav>
     <section></section>
 
@@ -39,6 +57,23 @@
     <script src="js/jquery.matchHeight-min.js"></script>
     <script src="js/jquery.js"></script>
     <script src="js/bundle.js"></script>
+    <script>
+        var forEach = function(t, o, r) {
+            if ("[object Object]" === Object.prototype.toString.call(t))
+                for (var c in t) Object.prototype.hasOwnProperty.call(t, c) && o.call(r, t[c], c, t);
+            else
+                for (var e = 0, l = t.length; l > e; e++) o.call(r, t[e], e, t)
+        };
+
+        var hamburgers = document.querySelectorAll(".hamburger");
+        if (hamburgers.length > 0) {
+            forEach(hamburgers, function(hamburger) {
+                hamburger.addEventListener("click", function() {
+                    this.classList.toggle("is-active");
+                }, false);
+            });
+        }
+    </script>
 </body>
 
 </html>
